@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
       - name: node
-      - uses: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org
       - name: publish
-      - run: npm publish --access-public
-      - working-directory: src
+        run: npm publish --access-public
+        working-directory: src
         env:
           NODE_AUTH_TOKEN: ${{secrets.SIMPLIBOT_AUTH_TOKEN}}
