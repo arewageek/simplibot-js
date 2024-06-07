@@ -3,8 +3,7 @@
 
 name: Publish Package to npmjs
 on:
-  release:
-    types: [published]
+  release: publish
 jobs:
   build:
     runs-on: ubuntu-latest
